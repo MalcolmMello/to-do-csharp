@@ -24,6 +24,7 @@ public class Program
             ); se estiver usando sqlserver */
         builder.Services.AddDbContext<SistemaTarefasDBContext>();
         builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>(); //Injeção de dependência
+        builder.Services.AddScoped<ITarefaRepositorio, TarefaRepositorio>(); //Injeção de dependência
 
         var app = builder.Build();
 
